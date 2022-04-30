@@ -16,14 +16,14 @@ const io = new Server(server, {
     },
 });
 
+server.listen(3001, () => {
+    console.log("SERVER BOOTUP"); // execute this whenever server starts running
+});
+
 io.on("connection", (socket) => {     // 'on' means listening for the even which in this case is 'connection' and 'socket' as action
     console.log(`User: ${socket.id} Connected`);     // every user gets a different id
     
     socket.on("disconnect", () => {
         console.log(`User: ${socket.id} Session Closed`);
     });
-});
-
-server.listen(3001, () => {
-    console.log("SERVER BOOTUP"); // execute this whenever server starts running
 });
