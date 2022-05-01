@@ -22,7 +22,13 @@ server.listen(3001, () => {
 
 io.on("connection", (socket) => {     // 'on' means listening for the even which in this case is 'connection' and 'socket' as action
     console.log(`User: ${socket.id} Connected`);     // every user gets a different id
-    
+
+    // Creating a join room event using join function from socket.io
+    socket.on("join_room", (data) => {
+        socket.join(data);  // taken room id as data from frontend
+        console.log(`User ID: ${socket.id} Connected Room: ${data}`);
+    })
+
     socket.on("disconnect", () => {
         console.log(`User: ${socket.id} Session Closed`);
     });
