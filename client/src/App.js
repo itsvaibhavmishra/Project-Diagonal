@@ -9,24 +9,29 @@ function App() {
 
   const [username, setUsername] = useState("");
   const [room, setRoom] = useState("");
+  const [showChat, setShowChat] = useState(false);
 
   const joinRoom = () => {
 
     if (username !== "" && room !== "") {   // user cannot join if any of the field is empty
       socket.emit("join_room", room);  // "join_room" is event where room is passed as data to main.js
+      setShowChat(true);
     }
   };
 
   return (
     <div className="App">
-    <h2>Diagonal</h2>
-    {/* tracking changes on username and room id */}
-    <input type="text" placeholder='Username' onChange = {(event) => {setUsername(event.target.value);}}/>    
-    <input type="text" placeholder='Room ID' onChange = {(event) => {setRoom(event.target.value);}}/>
-    {/* joinRoom function is used for onlick event */}
-    <button onClick={joinRoom}>Connect for Chat</button>
-
-    <Chat socket={socket} username={username} room={room} />
+    {/* seperating chat menu from login page */}
+    {!showChat ? (
+        <div className='joinChatContainer'>
+          <h2>Diagonal</h2>
+          <input type="text" placeholder='Username' onChange = {(event) => {setUsername(event.target.value);}}/>    
+          <input type="text" placeholder='Room ID' onChange = {(event) => {setRoom(event.target.value);}}/>
+          <button onClick={joinRoom}>Connect for Chat</button>
+        </div>
+      ) : (
+      <Chat socket={socket} username={username} room={room} /> 
+    )}
   </div>
   );
 }
