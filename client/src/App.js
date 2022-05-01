@@ -1,6 +1,7 @@
 import './App.css';
 import io from "socket.io-client";   // used to establish a connection with socket.io server
 import { useState } from "react";
+import Chat from './Chat';
 
 const socket = io.connect("http://localhost:3001");
 
@@ -25,6 +26,7 @@ function App() {
     {/* joinRoom function is used for onlick event */}
     <button onClick={joinRoom}>Connect for Chat</button>
 
+    <Chat socket={socket} username={username} room={room} />
   </div>
   );
 }
