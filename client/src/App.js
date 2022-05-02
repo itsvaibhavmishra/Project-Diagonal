@@ -25,7 +25,7 @@ function App() {
     {!showChat ? (
         <div className='joinChatContainer'>
           <h2>Diagonal</h2>
-          <input type="text" placeholder='Username' onChange = {(event) => {setUsername(event.target.value);}}/>    
+          <input type="text" placeholder='Username' autoFocus onChange = {(event) => {setUsername(event.target.value);}}/>    
           <input type="text" placeholder='Room ID' onChange = {(event) => {setRoom(event.target.value);}}/>
           <button onClick={joinRoom}>Connect for Chat</button>
         </div>

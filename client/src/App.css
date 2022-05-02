@@ -1,0 +1,57 @@
+.App {
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    color: #212121;
+    font-family: "Open Sans", sans-serif;
+    display: block;
+    place-items: center;
+  }
+  body {
+    margin: 0%;
+    padding: 0%;
+  }
+  
+ 
+  .c-window p {
+    margin: 0;
+  }
+  .c-window .c-header {
+    height: 45px;
+    border-radius: 0px;
+    background: #263238;
+    position: relative;
+  }
+  .c-window .c-header #Head {
+      display: block;
+      padding: 0 1em 0 2em;
+      color: #fff;
+      font-weight: 1000;
+  }
+  .c-window .c-header #roomNo {
+    display: block;
+    padding: 0 1em 0 2em;
+    color: #fff;
+    font-weight: 700;
+    line-height: 20px;
+  }
+  
+  .c-window .c-body {
+    height: calc(740px - (45px + 70px));
+    border: 1px solid #263238;
+    background: #fff;
+    position: relative;
+  }
+  .c-window .c-body .msg-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .chat-window .chat-footer {
+    height: 40px;
+    border: 1px solid #263238;
+    border-top: none;
+    display: flex;
+  }
+  
