@@ -30,8 +30,9 @@ io.on("connection", (socket) => {     // 'on' means listening for the even which
     })
 
     socket.on("send_message", (data) => {
-        socket.to(data.room).emit("receive_message", data); // sending messages to respective rooms
+        socket.to(data.room).emit("receive_message", data); // sending and receiving messages to respective rooms
     });
+
 
     socket.on("disconnect", () => {
         console.log(`User: ${socket.id} Session Closed`);
