@@ -54,14 +54,12 @@ function Chat({socket, username, room}) {   // socket, username and room are tak
               return (
               // Checking and changing message sent in chat from different users form current user
               <div className="msg" id={username === msgContent.user ? "current" : "other"}>
-                <div className="msg-above">
-                  <p id="userName">{msgContent.user}</p>
-                </div>
                 <div className="msg-content">
                   <h3>{msgContent.msg}</h3>
                 </div>
-                <div className="msg-below">
-                  <p id="curTime">{msgContent.time}</p>
+                <div className="msg-Data">
+                  <p id="curTime">{msgContent.time}|</p>
+                  <p id="userName">{msgContent.user}</p>
                 </div>
               </div>
               )

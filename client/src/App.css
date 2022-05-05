@@ -84,10 +84,103 @@
     overflow-y: scroll;
     overflow-x: hidden;
   }
-  .chat-window .chat-footer {
+  .c-window .c-footer {
     height: 40px;
     border: 1px solid #263238;
     border-top: none;
     display: flex;
   }
   
+  .c-window .c-body .msg-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+  .c-window .c-body .msg-container::-webkit-scrollbar {
+    display: none;
+  }
+  .c-window .c-body .msg {
+    height: auto;
+    padding: 10px;
+    display: flex;
+  }
+  
+  .c-window .c-body .msg .msg-content {
+    width: auto;
+    height: auto;
+    min-height: 40px;
+    max-width: 120px;
+    background-color: #43a047;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  
+  #current {
+    justify-content: flex-end;
+  }
+  
+  #current .msg-content {
+    justify-content: flex-end;
+  }
+  
+  #current .msg-Data {
+    justify-content: flex-end;
+    margin-left: 5px;
+  }
+  
+  #other {
+    justify-content: flex-start;
+  }
+  
+  #other .msg-content {
+    justify-content: flex-start;
+    background-color: cornflowerblue;
+  }
+  
+  #other .msg-Data {
+    justify-content: flex-start;
+    margin-right: 5px;
+  }
+  
+  .msg-Data #user {
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  
+  .c-window .c-body .msg .msg-Data {
+    display: flex;
+    font-size: 12px;
+  }
+  
+  .c-window .c-footer {
+    height: 40px;
+    border: 1px solid #263238;
+    border-top: none;
+    display: flex;
+  }
+
+  .c-window .c-footer input {
+    height: 100%;
+    flex: 85%;
+    border: 0;
+    padding: 0 0.7em;
+    font-size: 1em;
+    border-right: 1px dotted #607d8b;
+  
+    outline: none;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  .c-window .c-footer button:hover {
+    color: #43a047;
+  }
