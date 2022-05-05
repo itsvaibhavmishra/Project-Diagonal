@@ -1,5 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import ScrollToBottom from 'react-scroll-to-bottom';
+import Button from '@mui/material/Button';
+
+import SendIcon from '@mui/icons-material/Send';
+import FormatBoldIcon from '@mui/icons-material/FormatBold';
+import FormatItalicIcon from '@mui/icons-material/FormatItalic';
+import StrikethroughSIcon from '@mui/icons-material/StrikethroughS';
+import LinkIcon from '@mui/icons-material/Link';
+import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
+import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+import AlignHorizontalLeftIcon from '@mui/icons-material/AlignHorizontalLeft';
+import CodeIcon from '@mui/icons-material/Code';
+import TerminalIcon from '@mui/icons-material/Terminal';
+import AddIcon from '@mui/icons-material/Add';
+import SentimentSatisfiedAltOutlinedIcon from '@mui/icons-material/SentimentSatisfiedAltOutlined';
+import AlternateEmailOutlinedIcon from '@mui/icons-material/AlternateEmailOutlined';
 
 function Chat({socket, username, room}) {   // socket, username and room are taken from App.js Line 29
   const [currentMsg, setCurrentMsg] = useState("");  // keeps track of chat input field
@@ -55,30 +70,30 @@ function Chat({socket, username, room}) {   // socket, username and room are tak
         </div>
         <div className="c-footer">
           <div className="input-option">
-            <button id="Bold"></button>
-            <button id="Italic"></button>
-            <button id="Strike"></button>
-            
-            <button id="Link"></button>
+            <Button id="Bold" startIcon={<FormatBoldIcon/>} fontSize="small"></Button>
+            <Button id="Italic" startIcon={<FormatItalicIcon/>} fontSize="small"></Button>
+            <Button id="Strike" startIcon={<StrikethroughSIcon/>} fontSize="small"></Button>
 
-            <button id="numList"></button>
-            <button id="bulList"></button>
+            <Button id="Link" startIcon={<LinkIcon/>} fontSize="small"></Button>
 
-            <button id="quote"></button>
+            <Button id="numList" startIcon={<FormatListNumberedIcon/>} fontSize="small"></Button>
+            <Button id="bulList" startIcon={<FormatListBulletedIcon/>} fontSize="small"></Button>
 
-            <button id="snippet"></button>
-            <button id="block"></button>
+            <Button id="quote" startIcon={<AlignHorizontalLeftIcon/>} fontSize="small"></Button>
+ 
+            <Button id="snippet" startIcon={<CodeIcon/>} fontSize="small"></Button>
+            <Button id="block" startIcon={<TerminalIcon/>} fontSize="small"></Button>
           </div>
 
-          <input type="text" value={currentMsg} placeholder='Chat comes here...' onChange = {(event) => {setCurrentMsg(event.target.value);}} autoFocus onKeyPress={(event) => {event.key === "Enter" && sendMsg();}}/>
+          <input id="chatInput" type="text" value={currentMsg} placeholder='Chat comes here...' onChange = {(event) => {setCurrentMsg(event.target.value);}} autoFocus onKeyPress={(event) => {event.key === "Enter" && sendMsg();}}/>
           
           <div className="additional">
-            <button id="file"></button>
+            <Button id="file" startIcon={<AddIcon/>} fontSize="small"></Button>
 
-            <button id="emoji"></button>
-            <button id="mention"></button>
+            <Button id="emoji" startIcon={<SentimentSatisfiedAltOutlinedIcon/>} fontSize="small"></Button>
+            <Button id="mention" startIcon={<AlternateEmailOutlinedIcon/>} fontSize="small"></Button>
 
-            <button id="sendKey" onClick={sendMsg}>&#9658;</button>
+            <Button onClick={sendMsg}  variant="contained" color="primary" startIcon={<SendIcon/>}></Button>
           </div>
         </div>
     </div>

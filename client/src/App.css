@@ -73,7 +73,7 @@
   }
   
   .c-window .c-body {
-    height: calc(740px - (45px + 70px));
+    height: calc(720px - (45px + 70px));
     border: 1px solid #263238;
     background: #fff;
     position: relative;
