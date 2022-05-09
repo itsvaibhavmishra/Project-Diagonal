@@ -58,6 +58,7 @@ const ChatBoxContainer = ({ socket, room, username }) => {
   const [strike, setStrike] = useState(true);
 
   const addBold = () => {
+    
     document.getElementById("innerText").classList.add("bold");
     document.getElementById("bold").classList.add("white-color");
 
@@ -159,6 +160,7 @@ const ChatBoxContainer = ({ socket, room, username }) => {
     removeStrike,
     selectFile,
     renderMessages,
+    setBold,
   };
 
   return <ChatBoxRenderer value={value} />;

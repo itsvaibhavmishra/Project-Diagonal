@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import { useState } from "react";
 import ChatBoxContainer from "./MainChat/chat-box-container";
 
-const socket = io.connect("http://localhost:8000");
+const socket = io.connect("http://localhost:3001");
 
 function App() {
   const [username, setUsername] = useState("");
@@ -24,6 +24,7 @@ function App() {
           <h3>Diagonal</h3> 
           <input
             type="text"
+            autoFocus
             placeholder="Username"
             onChange={(event) => setUsername(event.target.value)}
           />
