@@ -1,4 +1,8 @@
-# Change directory to folder client/
+# Project-Diagonal
+A Real-Time chat application build using react and node which uses socket.io websockets for making connection on real-time.
+Project has functionality to add emoji, images and changing text styling while on chat window.
+
+## Change directory to folder client/
 
 While in directory type:
 
