@@ -1,12 +1,28 @@
 .App {
   width: 100vw;
   height: 100vh;
-  background: #fff;
+  z-index: 1;
+	background: linear-gradient(-45deg, red, blue, red);
+	background-size: 400% 400%;
+	animation: animate 15s ease infinite;
+
   color: #212121;
   font-family: "Open Sans", sans-serif;
   display: grid;
   place-items: center;
 }
+@keyframes animate {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 body {
   margin: 0%;
   padding: 0%;
@@ -21,7 +37,10 @@ body {
 
 .joinChatContainer h3 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem;  
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
 }
 .joinChatContainer input {
   width: 210px;
