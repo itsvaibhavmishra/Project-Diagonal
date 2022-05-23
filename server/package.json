@@ -4,8 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon main.js"
+    
+    "start": "concurrently \"npm run client\" \"npm run server\"",
+    "client": "cd .. && cd client && npm run start",
+    "server": "nodemon main.js",
+    "test": "cd .. && cd client && npm run test",
+    "build": "cd .. && cd client && npm run build",
+    "eject": "cd .. && cd client && npm run eject"
   },
   "author": "",
   "license": "ISC",

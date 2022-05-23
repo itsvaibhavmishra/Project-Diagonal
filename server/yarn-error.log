@@ -1,0 +1,53 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\vaibh\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js start
+
+PATH: 
+  C:\Users\vaibh\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\vaibh\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0;C:\windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Users\vaibh\AppData\Local\Programs\Python\Python39\Scripts;C:\Users\vaibh\AppData\Local\Programs\Python\Python39;C:\Users\vaibh\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;C:\adb;C:\Program Files\Git\cmd;C:\Program Files\nodejs;C:\Users\vaibh\AppData\Local\Programs\Python\Python39\Scripts;C:\Users\vaibh\AppData\Local\Programs\Python\Python39;C:\Users\vaibh\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;C:\Users\vaibh\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  16.15.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: D:\More\Projects\Project-Diagonal\server\package.json: Unexpected token } in JSON at position 416
+      at JSON.parse (<anonymous>)
+      at C:\Users\vaibh\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\vaibh\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\vaibh\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      
+      "start": "concurrently \"npm run client\" \"npm run server\"",
+      "client": "cd .. && cd client && npm run start",
+      "server": "nodemon main.js",
+      "test": "cd .. && cd client && npm run test",
+      "build": "cd .. && cd client && npm run build",
+      "eject": "cd .. && cd client && npm run eject",
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "cors": "^2.8.5",
+      "express": "^4.18.1",
+      "nodemon": "^2.0.16",
+      "socket.io": "^4.5.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
